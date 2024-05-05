@@ -1,0 +1,299 @@
+:root {
+    --main-color: #4646ce;
+    --main-color-hover: #4646ce;
+    --dark-color: #ffffff;
+    --container-width: 1100px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+  }
+  .button {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.3em;
+    padding: 0.7em 1.2em;
+    background-color: var(--main-color);
+    color: #464646;
+    border-radius: 30px;
+    font-size: 1.1em;
+  }
+  .button:hover {
+    background-color: var(--main-color-hover);
+    color: #111010;
+    transition: all 0.3s;
+  }
+  
+  /* HEADER */
+  .nav-container {
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 0px;
+    z-index: 10000;
+  }
+  .Navbar{
+      background: transparent;
+      backdrop-filter: blur(10px);
+  }
+  .nav-container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+  }
+  .nav-container .logo img {
+    width: 250px;
+    padding-top: 10px;
+  }
+  .nav-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .nav-container li a {
+    display: block;
+    color: rgb(14, 14, 14);
+    padding: 0 1.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 60px;
+    line-height: 60px;
+  }
+  .nav-container li a:hover {
+    color: var(--main-color);
+    transition: all 0.3s;
+    border-bottom: 5px solid var(--main-color);
+  }
+  .nav-container header label,
+  #hamburger {
+    display: none;
+    
+  }
+  
+/* FORM */
+.container {
+    position: relative;
+    width: 100vw; /* Mengatur lebar kontainer sesuai dengan lebar layar viewport */
+    max-width: 100%;
+    min-height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+form {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 20px;
+}
+
+input,
+textarea {
+    background: #eee;
+    padding: 12px 15px;
+    margin: 8px 15px;
+    width: calc(50% - 30px); /* Mengurangi margin dari lebar input */
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Memungkinkan pengguna untuk memperbesar atau memperkecil textarea secara vertikal */
+}
+
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+button {
+    color: #fff;
+    background: #3f87e6;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 55px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 1px solid #3f87e6;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.90);
+}
+
+.social-container {
+    margin: 20px 0;
+}
+
+.social-container a {
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+  
+  /* FOOTER */
+.footer-container {
+    /* Mengatur tampilan kontainer footer */
+    margin-top: 3rem; /* Jarak atas dari elemen di atasnya */
+    color: rgb(0, 0, 0); /* Warna teks putih */
+    background-color: yellow; /* Warna latar belakang menggunakan variabel CSS --dark-color */
+    padding: 2rem 1rem; /* Padding 2 rem di atas dan bawah, 1 rem di kiri dan kanan */
+  }
+  .footer-container hr {
+    /* Mengatur warna garis horizontal dalam footer */
+    color: #000000; /* Warna garis horizontal */
+  }
+  .footer-container a {
+    /* Mengatur tampilan tautan dalam footer */
+    text-decoration: none; /* Menghapus dekorasi tautan */
+    color: rgb(0, 0, 0); /* Warna teks putih */
+  }
+  .footer-container a:hover {
+    /* Mengatur tampilan tautan saat dihover dalam footer */
+    text-decoration: underline; /* Mengatur dekorasi tautan saat dihover menjadi garis bawah */
+  }
+  .footer-menu {
+    /* Mengatur tampilan menu footer */
+    max-width: var(--container-width); /* Lebar maksimum sesuai dengan variabel CSS --container-width */
+    margin: 0 auto 2rem; /* Margin atas dan bawah auto, sisi kiri dan kanan auto */
+    display: flex; /* Menjadikan konten sebagai flex */
+    flex-flow: row wrap; /* Tata letak flex menjadi baris dan wrap */
+    justify-content: space-between; /* Menyebarkan konten secara merata di antara elemen */
+  }
+  .footer-menu section {
+    /* Mengatur lebar setiap bagian dalam menu footer */
+    width: 23%; /* Lebar setiap bagian menjadi 23% */
+  }
+  .footer-menu ul {
+    /* Mengatur tampilan daftar dalam menu footer */
+    list-style-type: none; /* Menghilangkan tanda bullet pada daftar */
+    margin: 0; /* Menghilangkan margin */
+    padding: 0; /* Menghilangkan padding */
+  }
+  .footer-container ul li {
+    /* Mengatur jarak bawah antara setiap elemen daftar dalam footer */
+    margin-bottom: 0.5rem; /* Memberikan margin bawah sebesar 0.5 rem */
+  }
+  .footer-menu h3 {
+    /* Mengatur margin atas dari judul h3 dalam menu footer */
+    margin-top: 0; /* Menghapus margin atas */
+  }
+  .logo-container img {
+    /* Mengatur lebar gambar dalam kontainer logo */
+    width: 180px; /* Lebar gambar menjadi 180 piksel */
+  }
+  .footer-copyright {
+    /* Mengatur tampilan hak cipta dalam footer */
+    max-width: var(--container-width); /* Lebar maksimum sesuai dengan variabel CSS --container-width */
+    margin: 0 auto; /* Margin atas dan bawah auto, sisi kiri dan kanan auto */
+    display: flex; /* Menjadikan konten sebagai flex */
+    flex-flow: row wrap; /* Tata letak flex menjadi baris dan wrap */
+    justify-content: space-between; /* Menyebarkan konten secara merata di antara elemen */
+    padding: 0.5rem; /* Padding 0.5 rem di semua sisi */
+  }
+  .footer-copyright a {
+    /* Mengatur jarak kiri antara setiap tautan di dalam hak cipta footer */
+    margin-left: 0.5rem; /* Memberikan margin kiri sebesar 0.5 rem */
+  }
+  .footer-copyright a:hover {
+    /* Mengatur tampilan tautan saat dihover dalam hak cipta footer */
+    text-decoration: none; /* Menghapus dekorasi tautan saat dihover */
+  }
+  /* END OF FOOTER */
+  
+/* BREAKPOINT TABLET */
+@media screen and (max-width: 768px) {
+    .nav-container header {
+        width: 90%; /* Mengurangi lebar header pada tablet */
+    }
+
+    .nav-container .logo img {
+        width: 200px; /* Mengurangi lebar logo pada tablet */
+    }
+
+    .nav-container ul {
+        display: none; /* Sembunyikan menu utama pada tablet */
+    }
+
+    .nav-container header label,
+    #hamburger {
+        display: block; /* Tampilkan menu hamburger pada tablet */
+    }
+
+    form {
+        padding: 0 20px; /* Mengurangi padding pada form pada tablet */
+    }
+
+    input,
+    textarea {
+        width: calc(100% - 30px); /* Mengurangi margin dari lebar input pada tablet */
+    }
+}
+
+/* BREAKPOINT HANDPHONE */
+@media screen and (max-width: 481px) {
+    .nav-container header {
+        width: 90%; /* Mengurangi lebar header pada handphone */
+    }
+
+    .nav-container .logo img {
+        width: 180px; /* Mengurangi lebar logo pada handphone */
+    }
+
+    .nav-container ul {
+        display: none; /* Sembunyikan menu utama pada handphone */
+    }
+
+    .nav-container header label,
+    #hamburger {
+        display: block; /* Tampilkan menu hamburger pada handphone */
+    }
+
+    form {
+        padding: 0 10px; /* Mengurangi padding pada form pada handphone */
+    }
+
+    input,
+    textarea {
+        width: calc(100% - 20px); /* Mengurangi margin dari lebar input pada handphone */
+    }
+}

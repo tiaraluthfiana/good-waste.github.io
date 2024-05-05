@@ -1,0 +1,379 @@
+:root {
+  --main-color: #4646ce;
+  --main-color-hover: #4646ce;
+  --dark-color: #ffffff;
+  --container-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.3em;
+  padding: 0.7em 1.2em;
+  background-color: var(--main-color);
+  color: #464646;
+  border-radius: 30px;
+  font-size: 1.1em;
+}
+
+.button:hover {
+  background-color: var(--main-color-hover);
+  color: #111010;
+  transition: all 0.3s;
+}
+
+/* HEADER */
+.nav-container {
+  background-color: var(--dark-color);
+  position: sticky;
+  top: 0px;
+  z-index: 10000;
+}
+
+.Navbar {
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.nav-container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.nav-container .logo img {
+  width: 250px;
+  padding-top: 10px;
+  margin-left: 40px;
+}
+
+.nav-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-container li a {
+  display: block;
+  color: rgb(14, 14, 14);
+  padding: 0 1.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+}
+
+.nav-container li a:hover {
+  color: var(--main-color);
+  transition: all 0.3s;
+  border-bottom: 5px solid var(--main-color);
+}
+
+.nav-container header label,
+#hamburger {
+  display: none;
+}
+
+/*hero*/
+.hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    url("images/fd4.jpg");
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: rgb(16, 15, 15);
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  color: #000000;
+  box-shadow: gray;
+  text-decoration: wavy;
+}
+
+.hero-text p {
+  font-size: 25px;
+  margin: 0;
+  color: #000000;
+}
+
+.blog-container {
+  max-width: var(--container-width);
+  margin: 3rem auto;
+}
+
+.blog-container header {
+  padding: 0 2em;
+  text-align: center;
+}
+
+.blog-container header hr {
+  width: 25%;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+.blog-container header h1 {
+  font-size: 2em;
+}
+
+.blog-container p {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.blog-index {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+
+.blog-index .snippet {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.blog-index .snippet-img {
+  width: 20%;
+}
+
+.blog-index .snippet-text {
+  width: 50%;
+  padding: 0 1em;
+  font-size: 20px;
+}
+
+/* footer */
+.footer-container {
+  max-width: var(--container-width);
+  background-color: var(--dark-color);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.footer-container p {
+  flex: 1 1 100%;
+}
+
+footer {
+  text-align: center;
+  flex: 1 1 100%;
+  height: 60px;
+  color: black;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+  /*header*/
+  .nav-container header label {
+    /* Mengatur label dalam header */
+    display: inline-block; /* Menjadikan label sebagai inline-block */
+    color: rgb(0, 0, 0); /* Warna teks putih */
+    font-style: normal; /* Gaya teks normal */
+    font-size: 2rem; /* Ukuran font 2 rem */
+    padding: 0.5rem; /* Padding 0.5 rem di semua sisi */
+    padding-left: 1rem; /* Padding kiri 1 rem */
+  }
+
+  .nav-container header {
+    /* Mengatur header */
+    width: 100%; /* Lebar header menjadi 100% */
+  }
+
+  .nav-container nav ul {
+    /* Mengatur ul dalam nav */
+    flex-direction: column; /* Mengatur tata letak kolom untuk daftar navigasi */
+    width: 100%; /* Lebar ul menjadi 100% */
+    position: absolute; /* Posisi absolut */
+    top: 60px; /* Jarak dari atas 60 piksel */
+    left: 0; /* Meletakkan dari kiri */
+  }
+
+  .nav-container li a {
+    /* Mengatur tautan di dalam daftar navigasi */
+    display: block; /* Menjadikan tautan sebagai blok */
+    color: rgb(0, 0, 0); /* Warna teks */
+    background-color: var(
+      --dark-color
+    ); /* Warna latar belakang menggunakan variabel CSS --dark-color */
+    padding: 0 2em; /* Padding 0 di atas dan bawah, 2em di kiri dan kanan */
+    text-decoration: none; /* Menghilangkan dekorasi tautan */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+    height: auto; /* Tinggi elemen menyesuaikan dengan konten */
+  }
+
+  .nav-container li a:hover {
+    /* Mengatur tautan di dalam daftar navigasi saat dihover */
+    border-bottom: none; /* Menghapus garis bawah saat dihover */
+  }
+
+  .nav-container .logo {
+    /* Mengatur logo di dalam kontainer navigasi */
+    position: absolute; /* Posisi absolut */
+    right: 0px; /* Meletakkan logo di kanan */
+    z-index: 1000; /* Indeks z untuk menentukan urutan tumpukan */
+    margin-right: 5px;
+    justify-content: flex-end;
+  }
+
+  .nav-container .logo img {
+    /* Mengatur gambar logo di dalam kontainer navigasi */
+    width: 90px; /* Lebar gambar logo */
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+
+  .nav-container nav {
+    /* Mengatur navigasi untuk disembunyikan secara default */
+    display: none; /* Menyembunyikan elemen nav */
+  }
+
+  .nav-container header input:checked ~ nav {
+    /* Mengatur tampilan navigasi saat input checkbox yang sesuai dicentang */
+    display: flex; /* Menampilkan elemen nav sebagai flex */
+  }
+
+  /*HERO*/
+  .hero-text h1 {
+    font-size: 90%;
+  }
+
+  .hero-text p {
+    font-size: 90%;
+  }
+
+  /*BLOG*/
+  .blog-container header h1{
+    font-size: 95%;
+  }
+
+  .blog-container header p {
+    font-size: 95%;
+  }
+
+  .blog-index .snippet-img {
+    width: 50%;
+    height: 80%;
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+
+  .blog-index .snippet-text {
+    width: 100%;
+    font-size: 85%;
+  }
+
+  /* footer */
+  footer {
+    width: 100%; /* Mengatur lebar setiap bagian dalam menu footer pada tablet */
+  }
+
+  .footer-container .p {
+    text-align: center;
+    font-size: 50%;
+  }
+}
+
+/*BREAKPOINT HANDPHONE*/
+@media screen and (max-width: 481px) {
+  .nav-container ul {
+    display: none; /* Sembunyikan daftar navigasi pada layar kecil */
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    padding: 20px 0;
+    z-index: 9999;
+  }
+  .nav-container ul.active {
+    display: flex; /* Tampilkan daftar navigasi saat tombol hamburger diklik */
+  }
+
+  /* HEADER */
+  .nav-container .logo img {
+    width: 150px; /* Mengurangi lebar logo pada handphone */
+  }
+
+  .nav-container ul {
+    flex-direction: column; /* Menjadikan item menu menjadi kolom pada handphone */
+  }
+
+  /* HERO */
+  .hero-text h1 {
+    font-size: 2em; /* Mengurangi ukuran font judul pada handphone */
+  }
+
+  .hero-text p {
+    width: 1em;
+  }
+
+  /*BLOG*/
+  .blog-container header h1{
+    font-size: 20%;
+  }
+
+  .blog-container header p {
+    font-size: 20%;
+  }
+
+  .blog-index .snippet-img {
+    width: 5px;
+    height: 5px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    padding-top:  2px;
+  }
+
+  .blog-index .snippet-text {
+    width: 50%;
+    font-size: 25%;
+  }
+
+  /* FOOTER */
+  .footer-menu section {
+    width: 100%; /* Menyesuaikan lebar setiap bagian dalam menu footer pada handphone */
+  }
+}
